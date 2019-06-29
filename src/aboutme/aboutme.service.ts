@@ -1,25 +1,27 @@
 import { Injectable } from '@nestjs/common';
-import { CreateAboutMeDto } from './dto/aboutme.dto';
+import { aboutmeData } from '../interfaces/aboutme.data';
 
 @Injectable()
 export class AboutMeService {
-    private aboutme: CreateAboutMeDto; 
+    private aboutme: aboutmeData; 
 
-    create(aboutme: CreateAboutMeDto) {
-        this.aboutme = new CreateAboutMeDto()
-    }
-
-    findAll(): CreateAboutMeDto {
-        // this.aboutme = new CreateAboutMeDto();
-        this.aboutme = {
-            information: {
-                greet: 'test1',
-                introduce: 'test2',
-                job: 'test3',
-                name: 'test4',
-                nation: 'test123'
-            }
-        };
+    findAll(): aboutmeData {
+        this.aboutme = this.getAllFromDatabase();
         return this.aboutme;
+    }
+ 
+    getAllFromDatabase(): aboutmeData {
+        // getting data from db
+        const dataFromDatabase: aboutmeData = {
+            information: {
+                greet: 'Hello, it is from server',
+                introduce: '아 전역하고싶따',
+                job: '병장(진)',
+                name: 'Key kim',
+                nation: '대한민국',
+            }
+        }
+
+        return dataFromDatabase;
     }
 }

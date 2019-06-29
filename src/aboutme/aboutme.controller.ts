@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AboutMeService } from './aboutme.service';
-import { CreateAboutMeDto } from './dto/aboutme.dto';
+import { aboutmeData } from '../interfaces/aboutme.data';
 
 @Controller('aboutme')
 export class AboutMeController {
@@ -9,7 +9,7 @@ export class AboutMeController {
     }
 
     @Get()
-    findAll(): CreateAboutMeDto {
+    findAll(): aboutmeData {
         console.log("get all info");
         const allAboutme = this.aboutMe.findAll()
         return allAboutme;
