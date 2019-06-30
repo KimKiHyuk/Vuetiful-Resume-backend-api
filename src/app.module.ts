@@ -7,10 +7,11 @@ import { CareerService } from './career/career.service';
 import { CareerController } from './career/career.controller';
 import { DatabaseService } from './database/database.service';
 import { AboutMeDatabaseService } from './database/database.aboutme.service';
+import { CareerDatabaseService } from './database/database.career.service';
 
 @Module({
   imports: [],
   controllers: [AppController, AboutMeController, CareerController],
-  providers: [AppService, AboutMeService, CareerService, DatabaseService, AboutMeDatabaseService],
+  providers: [AppService, AboutMeService, CareerService, DatabaseService, AboutMeDatabaseService, CareerDatabaseService],
 })
 export class AppModule {}

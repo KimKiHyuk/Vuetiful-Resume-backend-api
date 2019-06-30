@@ -9,7 +9,7 @@ export class AboutMeDatabaseService implements IDatabase {
         // getting data from db
         const dataFromDatabase: aboutmeData = {
             information: {
-                greet: 'Hello, it is from server',
+                greet: 'greet here',
                 introduce: '최-신 인터페이스를 적용한 데이터베이스 모델',
                 job: '병장(진)',
                 name: 'Key kim',
