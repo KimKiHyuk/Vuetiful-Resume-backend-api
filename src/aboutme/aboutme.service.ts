@@ -1,27 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { aboutmeData } from '../interfaces/aboutme.data';
+import { AboutMeDatabaseService } from 'src/database/database.aboutme.service';
 
 @Injectable()
 export class AboutMeService {
-    private aboutme: aboutmeData; 
+    private  _count: number = 0;
+    private _aboutme: aboutmeData;
+    
+    constructor(private readonly AboutMeDatabaseService: AboutMeDatabaseService){}
 
-    findAll(): aboutmeData {
-        this.aboutme = this.getAllFromDatabase();
-        return this.aboutme;
-    }
- 
-    getAllFromDatabase(): aboutmeData {
-        // getting data from db
-        const dataFromDatabase: aboutmeData = {
-            information: {
-                greet: 'Hello, it is from server',
-                introduce: '아 전역하고싶따',
-                job: '병장(진)',
-                name: 'Key kim',
-                nation: '대한민국',
-            }
-        }
-
-        return dataFromDatabase;
+    public findAll(): aboutmeData {
+        this._aboutme = this.AboutMeDatabaseService.getAllFromDatabase() as aboutmeData;
+        console.log('/aboutme : ' + ++this._count );
+        return this._aboutme;
     }
 }

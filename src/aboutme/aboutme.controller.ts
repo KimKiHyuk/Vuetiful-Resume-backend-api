@@ -10,7 +10,7 @@ export class AboutMeController {
 
     @Get()
     findAll(): aboutmeData {
-        console.log("get all info");
+        //logger manager needs
         const allAboutme = this.aboutMe.findAll()
         return allAboutme;
     }
