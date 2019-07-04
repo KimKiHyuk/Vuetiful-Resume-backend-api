@@ -11,10 +11,16 @@ import { CareerDatabaseService } from './database/database.career.service';
 import { EducationDatabaseService } from './database/database.education.service';
 import { EducationService } from './education/education.service';
 import { EducationController } from './education/education.controller';
+import { SkillDatabaseService } from './database/database.skill.service';
+import { SkillService } from './skill/skill.service';
+import { SkillController } from './skill/skill.controller';
+import { ProjectDatabaseService } from './database/database.project.service';
+import { ProjectService } from './project/project.service';
+import { ProjectController } from './project/project.controller';
 
 @Module({
   imports: [],
-  controllers: [AppController, AboutMeController, CareerController, EducationController],
-  providers: [AppService, AboutMeService, CareerService, DatabaseService, AboutMeDatabaseService, CareerDatabaseService, EducationService, EducationDatabaseService],
+  controllers: [AppController, AboutMeController, CareerController, EducationController, SkillController, ProjectController],
+  providers: [AppService, AboutMeService, CareerService, DatabaseService, AboutMeDatabaseService, CareerDatabaseService, EducationService, EducationDatabaseService, SkillDatabaseService, SkillService, ProjectDatabaseService, ProjectService],
 })
 export class AppModule {}
