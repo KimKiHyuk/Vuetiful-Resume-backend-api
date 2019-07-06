@@ -1,21 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { aboutmeData } from 'src/interfaces/aboutme.data';
-import { IDatabase } from './IDatabase';
+import { Database } from './database';
 import { educationData } from 'src/interfaces/education.data';
 import { Array } from 'core-js/library/js';
 import json5 = require('json5');
 
 @Injectable()
-export class EducationDatabaseService implements IDatabase {
+export class EducationDatabaseService implements Database {
 
     public getAllFromDatabase(): educationData[] {
-        // getting data from db
-        let dataFromDatabase: educationData[] = this.getEducationData();
-
-        return dataFromDatabase;
-    }
-
-    private getEducationData(): educationData[] {
         // get data from career table
         const json = [
             {
@@ -44,10 +37,7 @@ export class EducationDatabaseService implements IDatabase {
             }
         ]
 
-          let str_json = json5.stringify(json);
-          return json5.parse(str_json);
+        return json5.parse(json5.stringify(json));
     }
-
-
 }
 

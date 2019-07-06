@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { IDatabase } from './IDatabase';
+import { Database } from './database';
 import { Array } from 'core-js/library/js';
 import { skillData } from 'src/interfaces/skill.data';
 import json5 = require('json5');
 
 @Injectable()
-export class SkillDatabaseService implements IDatabase {
+export class SkillDatabaseService implements Database {
 
     public getAllFromDatabase(): any {
         // getting data from db
@@ -102,11 +102,6 @@ export class SkillDatabaseService implements IDatabase {
             ],
         };
 
-        let str_json = json5.stringify(json);
-        let result: skillData[] = json5.parse(str_json);
-
-        return result;
+        return json5.parse(json5.stringify(json));
     }
-
-
 }

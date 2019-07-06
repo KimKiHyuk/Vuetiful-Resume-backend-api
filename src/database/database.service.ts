@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { IDatabase } from './IDatabase';
+import { Database } from './database';
 
 @Injectable()
-export class DatabaseService implements IDatabase {
+export class DatabaseService implements Database {
 
     public getAllFromDatabase() {
-        
+        // Get all data from all database
     }
 
 

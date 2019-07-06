@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { aboutmeData } from 'src/interfaces/aboutme.data';
-import { IDatabase } from './IDatabase';
+import { Database } from './database';
 import json5 = require('json5');
 
 @Injectable()
-export class AboutMeDatabaseService implements IDatabase {
+export class AboutMeDatabaseService implements Database {
 
     public getAllFromDatabase(): aboutmeData {
         // getting data from db
@@ -16,9 +16,7 @@ export class AboutMeDatabaseService implements IDatabase {
             introduce:
                 'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
         }
-        
-        let str_json = json5.stringify(json);
 
-        return json5.parse(str_json);
+        return json5.parse(json5.stringify(json));
     }
 }
