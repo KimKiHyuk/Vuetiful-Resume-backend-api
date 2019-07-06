@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { CareerService } from 'dist/src/career/career.service';
+import { CareerService } from 'src/career/career.service';
 import { careerData } from 'src/interfaces/career.data';
 
 @Controller('career')
@@ -9,7 +9,7 @@ export class CareerController {
     }
 
     @Get()
-    findAll(): any {
+    findAll(): careerData[] {
         //logger manager needs
         let data = this.CareerService.findAll();
         return data;

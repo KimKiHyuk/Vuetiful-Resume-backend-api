@@ -1,24 +1,24 @@
 import { Injectable } from '@nestjs/common';
 import { aboutmeData } from 'src/interfaces/aboutme.data';
 import { IDatabase } from './IDatabase';
+import json5 = require('json5');
 
 @Injectable()
 export class AboutMeDatabaseService implements IDatabase {
 
-    public getAllFromDatabase(): any {
+    public getAllFromDatabase(): aboutmeData {
         // getting data from db
-        const dataFromDatabase: aboutmeData = {
-            information: {
-                greet: 'greet here',
-                introduce: '최-신 인터페이스를 적용한 데이터베이스 모델',
-                job: '병장(진)',
-                name: 'Key kim',
-                nation: '대한민국',
-            }
+        const json = {
+            name: '김기혁',
+            job: '소프트웨어 개발자',
+            greet: 'Hello there11!',
+            nation: '대한민국 서울특별시',
+            introduce:
+                'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.'
         }
+        
+        let str_json = json5.stringify(json);
 
-        return dataFromDatabase;
+        return json5.parse(str_json);
     }
-
-
 }
