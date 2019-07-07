@@ -99,6 +99,45 @@ export class SkillDatabaseService implements Database {
                         },
                     ],
                 },
+                {
+                    name: 'Scala1',
+                    proficiency: 4,
+                    imageSource: 'https://vuetifyjs.com/apple-touch-icon-180x180.png',
+                    hashtag: [
+                        {
+                            name: 'django',
+                        },
+                        {
+                            name: 'crawler',
+                        },
+                    ],
+                },
+                {
+                    name: 'Scala2',
+                    proficiency: 4,
+                    imageSource: 'https://vuetifyjs.com/apple-touch-icon-180x180.png',
+                    hashtag: [
+                        {
+                            name: 'django',
+                        },
+                        {
+                            name: 'crawler',
+                        },
+                    ],
+                },
+                {
+                    name: 'Scala3',
+                    proficiency: 4,
+                    imageSource: 'https://vuetifyjs.com/apple-touch-icon-180x180.png',
+                    hashtag: [
+                        {
+                            name: 'django',
+                        },
+                        {
+                            name: 'crawler',
+                        },
+                    ],
+                },
             ],
         };
 

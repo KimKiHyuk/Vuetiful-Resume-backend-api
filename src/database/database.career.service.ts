@@ -12,39 +12,35 @@ export class CareerDatabaseService implements Database {
         // getting data from db
         const json = [
             {
-                color: 'cyan',
-                year: '1960',
-                month: '1',
+
+                period: '2015.05 ~ 2017.07',
                 company: 'google inc',
-                experience: 'honey sucker',
+                position: 'software engineer',
+                experience: 'Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
             },
             {
-                color: 'green',
-                year: '1970',
-                month: '2',
+                period: '2015.05 ~ 2017.07',
                 company: 'microsoft',
-                experience: '아무것도 안함',
+                position: 'software engineer',
+                experience: 'Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
             },
             {
-                color: 'pink',
-                year: '1980',
-                month: '3',
+                period: '2015.05 ~ 2017.07',
                 company: 'naver',
-                experience: '월급 축냄',
+                position: 'software engineer',
+                experience: 'Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
             },
             {
-                color: 'amber',
-                year: '1990',
-                month: '4',
+                period: '2015.05 ~ 2017.07',
                 company: 'kakao',
-                experience: '업무시간에 잠',
+                position: 'software engineer',
+                experience: 'Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
             },
             {
-                color: 'orange',
-                year: '2000',
-                month: '5',
+                period: '2015.05 ~ 2017.07',
                 company: 'ROKCC',
-                experience: '인턴',
+                position: 'software engineer',
+                experience: 'Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
             },
         ]
 
