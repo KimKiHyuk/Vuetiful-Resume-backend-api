@@ -1,4 +1,4 @@
-export interface skillData extends IData {
+export interface skillData extends baseData {
     avatarSize: number;
     skills: SkillsItem[];
 }

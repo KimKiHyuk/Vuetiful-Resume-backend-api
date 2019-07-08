@@ -9,8 +9,7 @@ export class CareerService {
   constructor(private readonly CareerDatabaseService: CareerDatabaseService) { }
 
   findAll(): careerData[] {
-    var ret  = this.CareerDatabaseService.getAllFromDatabase();
-    console.log('/career : ' + ++this._count);
-    return ret;
+    const data  = this.CareerDatabaseService.getAllFromDatabase();
+    return data;
   }
 }

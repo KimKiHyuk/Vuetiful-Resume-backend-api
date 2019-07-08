@@ -9,8 +9,7 @@ export class SkillService {
     }
 
     findAll(): skillData[] {
-        const data = this.SkillDatabaseService.getAllFromDatabase() as skillData[];
-        console.log(data);
+        const data = this.SkillDatabaseService.getAllFromDatabase();
         return data;
     }
 }

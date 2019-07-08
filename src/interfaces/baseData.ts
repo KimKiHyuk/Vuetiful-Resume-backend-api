@@ -1,0 +1,3 @@
+interface baseData {
+    hash?: string,
+}

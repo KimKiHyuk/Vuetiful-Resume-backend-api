@@ -8,7 +8,7 @@ export class EducationController {
     
     @Get()
     findAll(): educationData[] {
-        let data = this.EducationService.findAll();
+        const data = this.EducationService.findAll();
         return data;
     }
 }

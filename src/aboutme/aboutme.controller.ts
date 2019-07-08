@@ -11,7 +11,7 @@ export class AboutMeController {
     @Get()
     findAll(): aboutmeData {
         //logger manager needs
-        const allAboutme = this.aboutMe.findAll()
-        return allAboutme;
+        const data = this.aboutMe.findAll()
+        return data;
     }
 }

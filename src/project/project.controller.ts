@@ -8,7 +8,7 @@ export class ProjectController {
 
     @Get()
     findAll(): projectData[] {
-        let data = this.ProjectService.findAll();
+        const data = this.ProjectService.findAll();
         return data;
     }
 

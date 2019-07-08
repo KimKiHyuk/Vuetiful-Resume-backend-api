@@ -11,6 +11,7 @@ export class SkillController {
     @Get()
     findAll() : skillData[]
     {
-        return this.SkillService.findAll();
+        const data = this.SkillService.findAll();
+        return data;
     }
 }

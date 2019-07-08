@@ -20,7 +20,23 @@ import { ProjectController } from './project/project.controller';
 
 @Module({
   imports: [],
-  controllers: [AppController, AboutMeController, CareerController, EducationController, SkillController, ProjectController],
-  providers: [AppService, AboutMeService, CareerService, DatabaseService, AboutMeDatabaseService, CareerDatabaseService, EducationService, EducationDatabaseService, SkillDatabaseService, SkillService, ProjectDatabaseService, ProjectService],
+  controllers: [AppController, 
+                      AboutMeController, 
+                      CareerController, 
+                      EducationController, 
+                      SkillController, 
+                      ProjectController],
+  providers: [AppService,
+                    AboutMeService, 
+                    CareerService, 
+                    EducationService, 
+                    SkillService, 
+                    ProjectService,
+                    DatabaseService, 
+                    AboutMeDatabaseService,
+                    CareerDatabaseService, 
+                    EducationDatabaseService, 
+                    SkillDatabaseService,
+                    ProjectDatabaseService,],
 })
-export class AppModule {}
+export class AppModule { }

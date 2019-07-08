@@ -1,3 +1,0 @@
-interface IData {
-    hash?: string,
-}

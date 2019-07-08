@@ -7,7 +7,7 @@ export class ProjectService {
     constructor (private readonly ProjectDatabaseService: ProjectDatabaseService){}
 
     findAll(): projectData[] {
-        let data = this.ProjectDatabaseService.getAllFromDatabase();
+        const data = this.ProjectDatabaseService.getAllFromDatabase();
         return data;
     }
 }

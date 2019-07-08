@@ -8,7 +8,6 @@ export class EducationService {
 
     findAll(): educationData[] {
         const data = this.EducationDatabaseService.getAllFromDatabase();
-        console.log(data);
         return data;
     }
 

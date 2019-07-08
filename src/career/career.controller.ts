@@ -11,7 +11,7 @@ export class CareerController {
     @Get()
     findAll(): careerData[] {
         //logger manager needs
-        let data = this.CareerService.findAll();
+        const data = this.CareerService.findAll();
         return data;
     }
 }
