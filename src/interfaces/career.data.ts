@@ -1,4 +1,4 @@
-export interface careerData extends IData {
+export interface careerData extends baseData {
     company: string,
     experience: string,
     period: string,

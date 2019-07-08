@@ -17,6 +17,7 @@ import { SkillController } from './skill/skill.controller';
 import { ProjectDatabaseService } from './database/database.project.service';
 import { ProjectService } from './project/project.service';
 import { ProjectController } from './project/project.controller';
+import { LogService } from './log/log.service';
 
 @Module({
   imports: [],
@@ -37,6 +38,7 @@ import { ProjectController } from './project/project.controller';
                     CareerDatabaseService, 
                     EducationDatabaseService, 
                     SkillDatabaseService,
-                    ProjectDatabaseService,],
+                    ProjectDatabaseService,
+                    LogService,],
 })
 export class AppModule { }

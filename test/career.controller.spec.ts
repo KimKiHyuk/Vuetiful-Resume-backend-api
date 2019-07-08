@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CareerController } from './career.controller';
+import { CareerController } from '../src/career/career.controller';
 
 describe('Career Controller', () => {
   let controller: CareerController;

@@ -1,4 +1,4 @@
-export interface projectData extends IData {
+export interface projectData extends baseData {
     category: string,
     projects: projectItems[]
 }

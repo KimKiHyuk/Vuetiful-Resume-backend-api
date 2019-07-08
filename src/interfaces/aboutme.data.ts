@@ -1,4 +1,4 @@
-export interface aboutmeData extends IData {
+export interface aboutmeData extends baseData {
     information: {
         greet: string,
         introduce: string,
