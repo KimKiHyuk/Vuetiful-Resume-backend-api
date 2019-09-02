@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AboutMeController } from './aboutme/aboutme.controller';
-import { AboutMeService } from './aboutme/aboutme.service';
+// import { AboutMeController } from './aboutme/aboutme.controller';
+// import { AboutMeService } from './aboutme/aboutme.service';
 import { CareerService } from './career/career.service';
 import { CareerController } from './career/career.controller';
 import { DatabaseService } from './database/database.service';
@@ -18,17 +19,18 @@ import { ProjectDatabaseService } from './database/database.project.service';
 import { ProjectService } from './project/project.service';
 import { ProjectController } from './project/project.controller';
 import { LogService } from './log/log.service';
+import { AboutMeModule } from './aboutme/aboutme.module';
 
 @Module({
-  imports: [],
+  imports: [TypeOrmModule.forRoot(), AboutMeModule],
   controllers: [AppController, 
-                      AboutMeController, 
+                    //  AboutMeController, 
                       CareerController, 
                       EducationController, 
                       SkillController, 
                       ProjectController],
   providers: [AppService,
-                    AboutMeService, 
+                  //  AboutMeService, 
                     CareerService, 
                     EducationService, 
                     SkillService, 

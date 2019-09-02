@@ -1,20 +1,24 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Put, Body} from '@nestjs/common';
 import { AboutMeService } from './aboutme.service';
-import { aboutmeData } from '../interfaces/aboutme.data';
-import { LogService } from 'src/log/log.service';
+// import { aboutmeData } from '../interfaces/aboutme.data';
+// import { LogService } from 'src/log/log.service';
+import { aboutmeEntity } from './aboutme.entity';
 
 @Controller('aboutme')
 export class AboutMeController {
-    constructor(private readonly aboutMe: AboutMeService,
-                        private readonly Logger: LogService) {
+    constructor(private readonly aboutMe: AboutMeService) {
         // constructor
     }
 
     @Get()
-    findAll(): aboutmeData {
+    findAll(): Promise<aboutmeEntity[]> {
         //logger manager needs
-        const data = this.aboutMe.findAll()
-        this.Logger.debug('AboutMe called');
-        return data;
+   //     this.Logger.debug('AboutMe called');
+        return this.aboutMe.findAll()
+    }
+
+    @Put()
+    update(@Body() data: aboutmeEntity) {
+        return this.aboutMe.updateAboutMe(data);
     }
 }
