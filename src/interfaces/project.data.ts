@@ -1,16 +1,26 @@
-export interface projectData extends baseData {
-    category: string,
-    projects: projectItems[]
+export class projectData {
+    category: string = '';
+    projects: Array<projectItems>;
+
+    constructor() {
+        this.projects = new Array<projectItems>();
+        this.projects.push(new projectItems());
+    }
 }
 
-interface projectItems {
-    title: string,
-    description: string,
-    tech: techItems[],
-    github: string
+class projectItems {
+    title: string = '';
+    description: string = '';
+    tech: Array<techItems>;
+    github: string = '';
+
+    constructor() {
+        this.tech = new Array<techItems>();
+        this.tech.push(new techItems());
+    }
 }
 
-interface techItems {
-    skill: string,
-    usage: string
+class techItems {
+    skill:string = '';
+    usage:string = '';
 }

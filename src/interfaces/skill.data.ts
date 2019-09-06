@@ -1,15 +1,25 @@
-export interface skillData extends baseData {
-    avatarSize: number;
-    skills: SkillsItem[];
+export class skillData {
+    avatarSize: number = 0;
+    skills: Array<SkillsItem>;
+
+    constructor() {
+        this.skills = new Array<SkillsItem>();
+        this.skills.push(new SkillsItem());
+    }
 }
 
-export interface SkillsItem {
-    name: string;
-    proficiency: number;
-    imageSource: string;
-    hashtag: HashtagItem[];
+class SkillsItem {
+    name: string = '';
+    proficiency: number = 0;
+    imageSource: string = '';
+    hashtag: Array<HashtagItem>;
+
+    constructor() {
+        this.hashtag = new Array<HashtagItem>();
+        this.hashtag.push(new HashtagItem());
+    }
 }
 
-export interface HashtagItem {
-    name: string;
+class HashtagItem {
+    name: string = '';
 }

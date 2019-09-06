@@ -20,6 +20,9 @@ import { ProjectService } from './project/project.service';
 import { ProjectController } from './project/project.controller';
 import { LogService } from './log/log.service';
 import { AboutMeModule } from './aboutme/aboutme.module';
+import { FormatService } from './format/format.service';
+import { FormatController } from './format/format.controller';
+import { FormatDatabaseService} from './database/database.format.service'
 
 @Module({
   imports: [TypeOrmModule.forRoot(), AboutMeModule],
@@ -28,7 +31,7 @@ import { AboutMeModule } from './aboutme/aboutme.module';
                       CareerController, 
                       EducationController, 
                       SkillController, 
-                      ProjectController],
+                      ProjectController, FormatController],
   providers: [AppService,
                   //  AboutMeService, 
                     CareerService, 
@@ -41,6 +44,8 @@ import { AboutMeModule } from './aboutme/aboutme.module';
                     EducationDatabaseService, 
                     SkillDatabaseService,
                     ProjectDatabaseService,
-                    LogService,],
+                    LogService,
+                    FormatService,
+                    FormatDatabaseService],
 })
 export class AppModule { }
