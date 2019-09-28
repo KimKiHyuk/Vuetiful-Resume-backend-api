@@ -26,7 +26,10 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### A backend application for my resume web site, written in typescript. 
+
+* Vuetiful-Resume-backend-api handles API requests from [Frontend](https://github.com/KimKiHyuk/Vuetiful-Resume)
+
 
 ## Installation
 
@@ -38,6 +41,8 @@ $ npm install
 
 ```bash
 # development
+$ cd Vuetiful-Resume-backend-api
+$ docker-compose up
 $ npm run start
 
 # watch mode
